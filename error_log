@@ -1,0 +1,47 @@
+[26-Apr-2016 19:30:58 UTC] PHP Notice:  Undefined index: subject in /home/kcoltharp/public_html/sorry.php on line 27
+[26-Apr-2016 19:30:58 UTC] PHP Notice:  Undefined index: comments in /home/kcoltharp/public_html/sorry.php on line 28
+[26-Apr-2016 19:31:10 UTC] PHP Notice:  Undefined index: subject in /home/kcoltharp/public_html/sorry.php on line 27
+[26-Apr-2016 19:31:10 UTC] PHP Notice:  Undefined index: comments in /home/kcoltharp/public_html/sorry.php on line 28
+[26-Apr-2016 19:31:12 UTC] PHP Notice:  Undefined index: subject in /home/kcoltharp/public_html/sorry.php on line 27
+[26-Apr-2016 19:31:12 UTC] PHP Notice:  Undefined index: comments in /home/kcoltharp/public_html/sorry.php on line 28
+[26-Apr-2016 19:40:04 UTC] PHP Notice:  Undefined index: subject in /home/kcoltharp/public_html/sorry.php on line 27
+[26-Apr-2016 19:40:04 UTC] PHP Notice:  Undefined index: comments in /home/kcoltharp/public_html/sorry.php on line 28
+[26-Apr-2016 19:40:04 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/kcoltharp/public_html/sorry.php on line 33
+[26-Apr-2016 19:40:04 UTC] PHP Warning:  printf(): Too few arguments in /home/kcoltharp/public_html/sorry.php on line 33
+[28-Apr-2016 16:11:45 UTC] PHP Fatal error:  Call to undefined function iplog() in /home/kcoltharp/public_html/index.php on line 9
+[28-Apr-2016 16:12:18 UTC] PHP Fatal error:  Call to undefined function iplog() in /home/kcoltharp/public_html/index.php on line 9
+[28-Apr-2016 16:13:18 UTC] PHP Fatal error:  Call to undefined function iplog() in /home/kcoltharp/public_html/index.php on line 82
+[04-May-2016 16:03:26 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 16:03:32 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 16:03:38 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 16:03:49 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 16:04:52 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 16:05:15 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 16:05:29 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 16:05:46 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 16:07:17 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 16:07:22 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 16:07:43 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 16:08:14 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 16:09:04 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 16:09:12 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 16:17:36 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 16:17:48 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 19:53:54 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 19:55:11 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 20:02:39 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 20:04:11 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 20:04:12 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[04-May-2016 21:18:32 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[05-May-2016 00:43:11 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[05-May-2016 01:07:27 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[05-May-2016 01:07:29 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[05-May-2016 01:08:22 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[05-May-2016 01:18:26 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[05-May-2016 02:41:35 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[05-May-2016 03:16:59 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[05-May-2016 03:16:59 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 13
+[05-May-2016 03:17:44 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[05-May-2016 03:17:44 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 13
+[05-May-2016 03:18:29 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 12
+[05-May-2016 03:18:29 UTC] PHP Notice:  Undefined variable: ip in /home/kcoltharp/public_html/php/pages/header.php on line 13

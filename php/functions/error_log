@@ -1,0 +1,104 @@
+[26-Apr-2016 17:42:15 UTC] PHP Fatal error:  Call to undefined method PDO::real_escape_string() in /home/kcoltharp/public_html/php/functions/processSignup.php on line 12
+[26-Apr-2016 17:42:24 UTC] PHP Fatal error:  Call to undefined method PDO::real_escape_string() in /home/kcoltharp/public_html/php/functions/processSignup.php on line 12
+[26-Apr-2016 17:42:32 UTC] PHP Notice:  Undefined index: fname in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[26-Apr-2016 17:42:32 UTC] PHP Fatal error:  Call to undefined method PDO::real_escape_string() in /home/kcoltharp/public_html/php/functions/processSignup.php on line 12
+[26-Apr-2016 17:42:33 UTC] PHP Notice:  Undefined index: fname in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[26-Apr-2016 17:42:33 UTC] PHP Fatal error:  Call to undefined method PDO::real_escape_string() in /home/kcoltharp/public_html/php/functions/processSignup.php on line 12
+[26-Apr-2016 17:42:34 UTC] PHP Notice:  Undefined index: fname in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[26-Apr-2016 17:42:34 UTC] PHP Fatal error:  Call to undefined method PDO::real_escape_string() in /home/kcoltharp/public_html/php/functions/processSignup.php on line 12
+[26-Apr-2016 17:42:35 UTC] PHP Notice:  Undefined index: fname in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[26-Apr-2016 17:42:35 UTC] PHP Fatal error:  Call to undefined method PDO::real_escape_string() in /home/kcoltharp/public_html/php/functions/processSignup.php on line 12
+[26-Apr-2016 17:42:37 UTC] PHP Notice:  Undefined index: fname in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[26-Apr-2016 17:42:37 UTC] PHP Fatal error:  Call to undefined method PDO::real_escape_string() in /home/kcoltharp/public_html/php/functions/processSignup.php on line 12
+[26-Apr-2016 17:42:39 UTC] PHP Notice:  Undefined index: fname in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[26-Apr-2016 17:42:39 UTC] PHP Fatal error:  Call to undefined method PDO::real_escape_string() in /home/kcoltharp/public_html/php/functions/processSignup.php on line 12
+[26-Apr-2016 17:43:37 UTC] PHP Fatal error:  Call to undefined method PDO::real_escape_string() in /home/kcoltharp/public_html/php/functions/processSignup.php on line 12
+[26-Apr-2016 17:44:46 UTC] PHP Notice:  Undefined index: fname in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[26-Apr-2016 17:44:46 UTC] PHP Fatal error:  Call to undefined method PDO::real_escape_string() in /home/kcoltharp/public_html/php/functions/processSignup.php on line 12
+[26-Apr-2016 17:44:49 UTC] PHP Notice:  Undefined index: fname in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[26-Apr-2016 17:44:49 UTC] PHP Fatal error:  Call to undefined method PDO::real_escape_string() in /home/kcoltharp/public_html/php/functions/processSignup.php on line 12
+[26-Apr-2016 17:44:50 UTC] PHP Notice:  Undefined index: fname in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[26-Apr-2016 17:44:50 UTC] PHP Fatal error:  Call to undefined method PDO::real_escape_string() in /home/kcoltharp/public_html/php/functions/processSignup.php on line 12
+[26-Apr-2016 18:00:05 UTC] PHP Notice:  Undefined variable: data in /home/kcoltharp/public_html/php/functions/processSignup.php on line 28
+[26-Apr-2016 18:00:09 UTC] PHP Notice:  Undefined variable: data in /home/kcoltharp/public_html/php/functions/processSignup.php on line 28
+[26-Apr-2016 18:00:16 UTC] PHP Notice:  Undefined variable: data in /home/kcoltharp/public_html/php/functions/processSignup.php on line 28
+[26-Apr-2016 18:12:50 UTC] PHP Notice:  Undefined variable: data in /home/kcoltharp/public_html/php/functions/processSignup.php on line 28
+[26-Apr-2016 18:14:12 UTC] PHP Notice:  Undefined variable: data in /home/kcoltharp/public_html/php/functions/processSignup.php on line 31
+[26-Apr-2016 18:14:23 UTC] PHP Notice:  Undefined variable: data in /home/kcoltharp/public_html/php/functions/processSignup.php on line 31
+[26-Apr-2016 18:15:37 UTC] PHP Notice:  Undefined variable: data in /home/kcoltharp/public_html/php/functions/processSignup.php on line 31
+[26-Apr-2016 18:38:49 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 53
+[26-Apr-2016 18:38:49 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[26-Apr-2016 18:38:49 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'my_user'@'localhost' (using password: YES) in /home/kcoltharp/public_html/php/functions/processSignup.php on line 56
+[26-Apr-2016 18:39:49 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 53
+[26-Apr-2016 18:39:49 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[26-Apr-2016 18:46:13 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[26-Apr-2016 18:46:13 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[26-Apr-2016 18:46:13 UTC] PHP Notice:  Undefined variable: disabledvet in /home/kcoltharp/public_html/php/functions/processSignup.php on line 65
+[26-Apr-2016 18:47:57 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[26-Apr-2016 18:47:57 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[26-Apr-2016 18:47:57 UTC] PHP Notice:  Undefined variable: disabledvet in /home/kcoltharp/public_html/php/functions/processSignup.php on line 65
+[26-Apr-2016 18:48:53 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[26-Apr-2016 18:48:53 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[26-Apr-2016 18:48:53 UTC] PHP Notice:  Undefined variable: disabledvet in /home/kcoltharp/public_html/php/functions/processSignup.php on line 65
+[26-Apr-2016 18:48:53 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[26-Apr-2016 18:48:53 UTC] PHP Warning:  printf(): Too few arguments in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[26-Apr-2016 19:55:55 UTC] PHP Notice:  Undefined index: comments in /home/kcoltharp/public_html/php/functions/postComments.php on line 30
+[26-Apr-2016 19:55:55 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/kcoltharp/public_html/php/functions/postComments.php on line 35
+[26-Apr-2016 19:55:55 UTC] PHP Warning:  printf(): Too few arguments in /home/kcoltharp/public_html/php/functions/postComments.php on line 35
+[26-Apr-2016 20:00:18 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/kcoltharp/public_html/php/functions/postComments.php on line 35
+[26-Apr-2016 20:00:18 UTC] PHP Warning:  printf(): Too few arguments in /home/kcoltharp/public_html/php/functions/postComments.php on line 35
+[27-Apr-2016 20:12:47 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[27-Apr-2016 20:12:47 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[27-Apr-2016 20:12:47 UTC] PHP Notice:  Undefined variable: disabledvet in /home/kcoltharp/public_html/php/functions/processSignup.php on line 65
+[27-Apr-2016 20:12:47 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[27-Apr-2016 20:12:47 UTC] PHP Warning:  printf(): Too few arguments in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[28-Apr-2016 13:18:56 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[28-Apr-2016 13:18:56 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[28-Apr-2016 13:18:56 UTC] PHP Notice:  Undefined variable: disabledvet in /home/kcoltharp/public_html/php/functions/processSignup.php on line 65
+[28-Apr-2016 13:18:56 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[28-Apr-2016 13:18:56 UTC] PHP Warning:  printf(): Too few arguments in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[10-May-2016 13:32:33 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[10-May-2016 13:32:33 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[10-May-2016 13:32:33 UTC] PHP Notice:  Undefined variable: disabledvet in /home/kcoltharp/public_html/php/functions/processSignup.php on line 65
+[10-May-2016 13:32:33 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[10-May-2016 13:32:33 UTC] PHP Warning:  printf(): Too few arguments in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[10-May-2016 13:36:59 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[10-May-2016 13:36:59 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[10-May-2016 13:36:59 UTC] PHP Notice:  Undefined variable: disabledvet in /home/kcoltharp/public_html/php/functions/processSignup.php on line 65
+[10-May-2016 13:36:59 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[10-May-2016 13:36:59 UTC] PHP Warning:  printf(): Too few arguments in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[11-May-2016 17:56:29 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[11-May-2016 17:56:29 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[11-May-2016 17:56:29 UTC] PHP Notice:  Undefined variable: disabledvet in /home/kcoltharp/public_html/php/functions/processSignup.php on line 65
+[11-May-2016 17:56:29 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[11-May-2016 17:56:29 UTC] PHP Warning:  printf(): Too few arguments in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[12-May-2016 16:00:26 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[12-May-2016 16:00:26 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[12-May-2016 16:00:26 UTC] PHP Notice:  Undefined variable: disabledvet in /home/kcoltharp/public_html/php/functions/processSignup.php on line 65
+[12-May-2016 16:00:26 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[12-May-2016 16:00:26 UTC] PHP Warning:  printf(): Too few arguments in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[12-May-2016 16:02:57 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[12-May-2016 16:02:57 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[12-May-2016 16:02:57 UTC] PHP Notice:  Undefined variable: disabledvet in /home/kcoltharp/public_html/php/functions/processSignup.php on line 65
+[12-May-2016 16:02:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[12-May-2016 16:02:57 UTC] PHP Warning:  printf(): Too few arguments in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[19-May-2016 12:35:52 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[19-May-2016 12:35:52 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[19-May-2016 12:35:52 UTC] PHP Notice:  Undefined variable: disabledvet in /home/kcoltharp/public_html/php/functions/processSignup.php on line 65
+[19-May-2016 12:35:52 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[19-May-2016 12:35:52 UTC] PHP Warning:  printf(): Too few arguments in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[19-May-2016 12:41:37 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[19-May-2016 12:41:37 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[19-May-2016 12:41:37 UTC] PHP Notice:  Undefined variable: disabledvet in /home/kcoltharp/public_html/php/functions/processSignup.php on line 65
+[19-May-2016 12:41:37 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[19-May-2016 12:41:37 UTC] PHP Warning:  printf(): Too few arguments in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[22-May-2016 00:09:57 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[22-May-2016 00:09:57 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[22-May-2016 00:09:57 UTC] PHP Notice:  Undefined variable: disabledvet in /home/kcoltharp/public_html/php/functions/processSignup.php on line 65
+[22-May-2016 00:09:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[22-May-2016 00:09:57 UTC] PHP Warning:  printf(): Too few arguments in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[22-May-2016 00:13:11 UTC] PHP Notice:  Undefined index: submissiondate in /home/kcoltharp/public_html/php/functions/processSignup.php on line 54
+[22-May-2016 00:13:11 UTC] PHP Notice:  Undefined index: submissiontime in /home/kcoltharp/public_html/php/functions/processSignup.php on line 55
+[22-May-2016 00:13:11 UTC] PHP Notice:  Undefined variable: disabledvet in /home/kcoltharp/public_html/php/functions/processSignup.php on line 65
+[22-May-2016 00:13:11 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
+[22-May-2016 00:13:11 UTC] PHP Warning:  printf(): Too few arguments in /home/kcoltharp/public_html/php/functions/processSignup.php on line 68
