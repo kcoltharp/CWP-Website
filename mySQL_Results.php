@@ -30,4 +30,27 @@ class Database extends PDO{
 		}
 	}
 
+	function getAllScores($db){
+		$stmt = $db->prepare("
+			SELECT a.student_num, a.fname, a.lname, b.class_num, b.legal_test_score, b.safety_test_score, b.combined_score, b.target_hits, b.pass_fail
+			FROM students a, scores b
+			WHERE a.student_num = b.student_num");
+		$stmt->execute();
+		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		return $rows;
+	}
+
+	function getClassInfo($db){
+		$stmt = $db->prepare("
+			SELECT
+				a.fname, a.lname, b.class_num, b.class_start, b.lesson1_start,
+				b.lesson2_start, b.legal_test_start, b.lesson3_start,
+				b.safety_test_start, b.qual_start
+			FROM students a, classes b, student_numbers c
+			WHERE c.student_num=a.student_num AND c.class_num=b.class_num");
+		$stmt->execute();
+		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		return $rows;
+	}
+
 }

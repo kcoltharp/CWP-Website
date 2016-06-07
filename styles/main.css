@@ -1,11 +1,10 @@
-/*body{
+body{
 	width: 100%;
 	font-family: Verdana, Geneva, sans-serif;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-image: url("../images/backgroundWorking.jpg");
 }
-*/
 input{
 	font:1em "Open Sans", sans-serif;
 	color:#363639;

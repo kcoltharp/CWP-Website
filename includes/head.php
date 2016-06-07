@@ -19,5 +19,5 @@
 	<![endif]-->
 	<link rel="stylesheet" href="styles/main.css">
 	<link rel="stylesheet" href="styles/screen.css">
-	<script src="js/main"></script>
+	<script src="js/main.js"></script>
 </head>

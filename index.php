@@ -1,84 +1,69 @@
 <?php
 require_once 'init.php';
 ?>
-<h1>Home</h1>
-<br /><br />
-<p style="float:right; margin-right: 10px;">
-	February 20, 2015
+<p style="float:left; margin-left: 10px;">
+	<?php
+	$date = new DateTime('now');
+	echo $date->format('D M d Y') . "<br>";
+	echo $date->format('g:i:s a') . "<br>";
+	?>
 </p>
 <br />
-
-<?php
-$db = new Database(dsn, user, pwd);
-/*
-  SELECT a.student_num, a.fname, a.lname, b.class_num, b.legal_test_score, b.safety_test_score, b.combined_score, b.target_hits, b.pass_fail
-  FROM students a, scores b
-  WHERE a.student_num = b.student_num
- *
- */
-$stmt = $db->prepare("SELECT `student_num`, `fname`, `lname` FROM `students`");
-$stmt->execute();
-$studentRows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-$stmt2 = $db->prepare("SELECT `class_num`, `legal_test_score`, `saftey_test_score`, `combine_score`, `target_hits`, `pass_fail` FROM `scores` WHERE `student_num`=:studentNum");
-$stmt2->bindParam(':studentNum', $studentRows['student_num']);
-$stmt2->execute();
-$scoresRow = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-?>
-<table border="1" cellspacing="3" cellpadding="2">
-	<thead>
-		<tr>
-			<th>Student Number</th>
-			<th>Class Number</th>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Legal Test Score</th>
-			<th>Firearm Safety Test Score</th>
-			<th>Combined Score</th>
-			<th>Target Hits</th>
-			<th>Class Pass/Fail</th>
-		</tr>
-	</thead>
-	<tbody>
-		<?php while((list(, $value) = each($studentRows)) && (list(, $value2) = each($scoresRow))){ ?>
+<form action="" method="post">
+	<table border="1" cellspacing="3" cellpadding="2">
+		<thead>
 			<tr>
-				<td><?php echo $studentRows['student_num'] ?></td>
-				<td><?php echo $scoresRows['class_num'] ?></td>
-				<td><?php echo $studentRows['fname'] ?></td>
-				<td><?php echo $studentRows['lname'] ?></td>
-				<td><?php echo $scoresRows['legal_test_score'] ?></td>
-				<td><?php echo $scoresRows['safety_test_score'] ?></td>
-				<td><?php echo $scoresRows['combined_score'] ?></td>
-				<td><?php echo $scoresRows['target_hits'] ?></td>
-				<td><?php echo $scoresRows['pass_fail'] ?></td>
+				<th>Student Number</th>
+				<th>Class Number</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Legal Test Score</th>
+				<th>Firearm Safety Test Score</th>
+				<th>Combined Score</th>
+				<th>Target Hits</th>
+				<th>Class Pass/Fail</th>
 			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
+		</thead>
+		<tbody>
+			<?php
+			$db = new Database(dsn, user, pwd);
+			$rows = $db->getAllScores($db);
+			foreach($rows as $value){
+				?>
+				<tr>
+					<td><?php
+						if($value['student_num'] === "" || $value['student_num'] === NULL){
+							echo "<input type='text' name='studentNumber' placeholder='Student Number' />";
+						} else{
+							echo $value['student_num'];
+						}
+						?></td>
+					<td><?php echo $value['class_num'] ?></td>
+					<td><?php echo $value['fname'] ?></td>
+					<td><?php echo $value['lname'] ?></td>
+					<td><?php echo $value['legal_test_score'] ?></td>
+					<td><?php echo $value['safety_test_score'] ?></td>
+					<td><?php echo $value['combined_score'] ?></td>
+					<td><?php echo $value['target_hits'] ?></td>
+					<td><?php echo $value['pass_fail'] ?></td>
+				</tr>
+			<?php } ?>
 		</tbody>
 	</table>
-
-	<pre>
-		<?php print_r($rows); ?>
-	</pre>
-	<p>
-		Hey, great news! The new To Do lists are now available, so start using them.
-	</p>
-	<p>
-		Coming soon, a nice attractive calendar that will be able to track<br>
-		all of our current and future appointments!<br><br><br><br>
-
-		Admin
-	</p>
+	<br>
+	<button id="button" type="submit" name="submit">Submit Changes</button>
+	<button id="button" type="button">Get Class Information</button>
+	<button id="button" type="button">Get All Student Information</button>
+	<button id="button" type="button">Button 3</button>
+	<button id="button" type="button">Button 4</button>
+	<button id="button" type="button">Button 5</button>
+</form>
 
 
 
 
-	<?php
-	require_once 'includes/overall/footer.php';
+
+
+<?php
+require_once 'includes/overall/footer.php';
+?>
