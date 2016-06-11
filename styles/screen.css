@@ -15,14 +15,39 @@ p {
 	padding:0;
 	margin:0 0 20px 0;
 }
-
+#date{
+	margin-left: 7%;
+	margin-right: 7%;
+	background-color: #f9f9f9;
+	color: black;
+	border: 3px solid black;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 5px;
+}
+#date:hover{
+	background-color: black;
+	color: #f9f9f9;
+	border-radius: 5px;
+	font-weight: bolder;
+}
 a:link, a:visited {
-	text-decoration:underline;
-	color:#000;
+	background-color: #f9f9f9;
+	color: black;
+	border: 3px solid black;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 5px;
 }
 
-a:hover {
-	text-decoration:none;
+a:hover, a:active {
+	background-color: black;
+	border-radius: 5px;
+	color: #f9f9f9;
 }
 
 ul li {
@@ -30,7 +55,7 @@ ul li {
 }
 
 ul li input[type="text"], ul li input[type="password"] {
-	width:200px;
+	width:150px;
 }
 
 textarea {
@@ -58,17 +83,18 @@ h2 {
 /* Containers */
 #container, footer {
 	background-color: #f9f9f9;
-	width:920px;
+	width:980px;
 	margin:0 auto;
 	padding:20px;
 }
 
 header {
 	background-color: #f9f9f9;
-	width:940px;
+	width:990px;
 	padding:10px;
-	margin:0 auto 10px auto;
+	margin:0 auto 0 auto;
 	border-radius: 15px;
+	border-bottom: 3px dashed #aaa;
 }
 
 #container {
@@ -98,7 +124,7 @@ footer {
 /* Navigation */
 nav {
 	font-family: 'Cinzel';
-	font-size: 1.5em;
+	font-size: 1em;
 	float:left;
 }
 
@@ -127,7 +153,8 @@ nav ul li a.last {
 aside {
 	width:260px;
 	float:right;
-	border-left:1px dashed #aaa;
+	border-left:3px dashed #aaa;
+	border-bottom: 3px dashed #aaa;
 	padding-left:15px;
 }
 
@@ -148,7 +175,7 @@ aside {
 
 /* Footer */
 footer {
-	border-top:1px dashed #ddd;
+	border-top:3px dashed #ddd;
 	color:#999;
 }
 
@@ -161,4 +188,29 @@ button#button{
 	float: left;
 	margin: 5px;
 	padding: 5px;
+}
+
+.calendar th{
+	height: 40px;
+	font-size: 1.4em;
+}
+.calendar td{
+	height: 45px;
+	width: 80px;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 1.0em;
+}
+
+#studentScores td{
+	text-align: center;
+	height: 50px;
+}
+
+#studentScores tr:hover {
+	background-color: lemonchiffon;
+}
+
+#studentScores tr:nth-child(even){
+	background-color: antiquewhite;
 }

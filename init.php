@@ -4,7 +4,9 @@ require_once 'php/functions/MyDB.php';
 require_once 'php/functions/geoPlugin.php';
 require_once 'php/functions/XIP.php';
 require_once 'php/functions/general.php';
-require_once 'mySQL_Results.php';
+require_once 'php/functions/mySQL_Results.php';
+require_once 'C:/xampp/htdocs/cwp-test/smarty/Smarty.class.php';
+
 
 //192.186.233.1 cwp
 define("dsn", "mysql:host=localhost;dbname=sccwp;charset=utf8");

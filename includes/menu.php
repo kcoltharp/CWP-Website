@@ -1,9 +1,9 @@
 <nav>
 	<ul>
 		<li><a href="index.php">Home</a></li>
-		<li><a href="">page 1</a></li>
-		<li><a href="">page 2</a></li>
-		<li><a href="">page 3</a></li>
-		<li><a href="">page 4</a></li>
+		<li><a id="studentScoresByClass" href="studentScoresByClass.php">Get Scores by Class</a></li>
+		<li><a id="scoresForStudent" href="scoresForStudent.php">Get A Student's Scores</a></li>
+		<li><a href="blog_edit.php">New Blog Entry</a></li>
+		<li><a href="calendar.php">Calendar</a></li>
 	</ul>
 </nav>
