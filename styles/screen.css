@@ -37,7 +37,7 @@ a:link, a:visited {
 	background-color: #f9f9f9;
 	color: black;
 	border: 3px solid black;
-	padding: 10px 20px;
+	padding: 5px 10px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -49,7 +49,9 @@ a:hover, a:active {
 	border-radius: 5px;
 	color: #f9f9f9;
 }
-
+.small{
+	font-size: .8em;
+}
 ul li {
 	padding:5px 0;
 }
@@ -151,11 +153,30 @@ nav ul li a.last {
 
 /* Aside */
 aside {
+	float: right;
 	width:260px;
-	float:right;
 	border-left:3px dashed #aaa;
 	border-bottom: 3px dashed #aaa;
-	padding-left:15px;
+	padding-left: 15px;
+}
+#side{
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	margin: 10px;
+}
+
+#notLoggedIn label {
+	position: relative;
+	vertical-align: middle;
+	bottom: 1px;
+}
+#notLoggedIn input[type=text],#notLoggedIn input[type=password],
+#notLoggedIn input[type=submit],#notLoggedIn input[type=email] {
+	display: block;
+	margin-bottom: 15px;
+}
+#notLoggedIn input[type=checkbox] {
+	margin-bottom: 15px;
 }
 
 .profile {
