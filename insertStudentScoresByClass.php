@@ -1,12 +1,9 @@
 <?php
 require_once 'init.php';
-$db = new Database(dsn, user, pwd);
-//$_POST = NULL;
+$db = new MyDB(DSN, USER, PASSWORD);
+
 if((isset($_POST['legalScore'])) && (($_POST['legalScore']) != '')){
-	$stmt = $db->prepare("UPDATE scores WHERE student_num = :studentNum");
-	$stmt->bindParam(':studentNum', $_POST['student_num'], PDO::PARAM_INT);
-	$stmt->execute();
-	$row = $stmt->rowCount();
+	$row = $db->updateScores($_POST);
 	echo $row . ' rows were updated.';
 } elseif((empty($_POST['classNum'])) || (($_POST['classNum']) == '') || (($_POST['classNum']) == NULL)){
 	?>
@@ -18,7 +15,6 @@ if((isset($_POST['legalScore'])) && (($_POST['legalScore']) != '')){
 	<?php
 } else{
 	$classNum = $_POST['classNum'];
-
 	$res = $db->prepare("SELECT
 		a.student_num, a.fname, a.lname, b.class_num,
 		b.legal_test_score, b.safety_test_score, b.combined_score,

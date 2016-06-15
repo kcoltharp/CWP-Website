@@ -1,18 +1,45 @@
 <?php
 
-require_once 'php/functions/MyDB.php';
+if(!isset($_COOKIE)){
+	echo 'Cookie not set';
+	$num = 3600;
+	$time = time();
+	$lifetime = $time + $num;
+	session_name("SESSION kenny\'s-spot");
+	session_set_cookie_params($lifetime, "/", "/kennys-spot.org/", FALSE, FALSE);
+	$_COOKIE['name'] = "SESSION kenny's-spot";
+	$_COOKIE['value'] = "kenny's-spot";
+	$_COOKIE['expire'] = $lifetime;
+	$_COOKIE['path'] = "/";
+	$_COOKIE['domain'] = "/kennys-spot.org/";
+	$_COOKIE['secure'] = FALSE;
+	$_COOKIE['httponly'] = FALSE;
+	session_start();
+} else{
+	$num = 3600;
+	$time = time();
+	$lifetime = $time + $num;
+	$_COOKIE['name'] = "SESSION kenny's-spot";
+	$_COOKIE['value'] = "kenny's-spot";
+	$_COOKIE['expire'] = $lifetime;
+	$_COOKIE['path'] = "/";
+	$_COOKIE['domain'] = "/kennys-spot.org/";
+	$_COOKIE['secure'] = FALSE;
+	$_COOKIE['httponly'] = FALSE;
+	echo "<pre>";
+	var_dump($_COOKIE);
+	echo "</pre>";
+}
+
 require_once 'php/functions/geoPlugin.php';
 require_once 'php/functions/XIP.php';
-require_once 'php/functions/general.php';
-require_once 'php/functions/mySQL_Results.php';
-require_once 'C:/xampp/htdocs/cwp-test/smarty/Smarty.class.php';
+require_once 'php/functions/class.MyDB.php';
 
-$smarty = new Smarty();
-$smarty->clearAllCache();
-//192.186.233.1 cwp
-define("dsn", "mysql:host=localhost;dbname=sccwp;charset=utf8");
-define("user", "kenny");
-define("pwd", "kc226975");
+$errors = array();
+
+define('DSN', 'mysql:dbname=sccwp;host=127.0.0.1;charset=utf8', false);
+define('USER', 'kenny', false);
+define('PASSWORD', 'kc226975', false);
 
 $geoplugin = new geoPlugin();
 $geoplugin->locate();
@@ -24,27 +51,34 @@ $State = ", {$geoplugin->region}";
 $XIP = new XIP();
 $blacklist = implode('', file("log/blacklist.txt"));
 $ip = $XIP->IP['client'];
-//echo $XIP->IP['all'];
 $logfile = "log/iplog.txt";
+
 if($XIP->CheckNet($blacklist, $ip)){
 	$ip = $XIP->IP['proxy'] . " (" . $XIP->IP['client'] . ")";
 	$ip .= " / " . $Geo_IP . " - " . $City . $State;
 	if(!iplog($logfile, $ip)){
-		die("IP Log error, make sure you have created the log directory '" .
-			dirname($logfile) .
-			"' or copy the files '$logfile' and '$logfile.lck', make sure you have set the right permissions");
+		$errors = "IP Log error, make sure you have created the log "
+			. "directory '" . dirname($logfile) . "' or copy the files "
+			. "'$logfile' and '$logfile.lck', make sure you have set "
+			. "the right permissions";
 	}
 }
-
-if(logged_in() === true){
+$db = new MyDB(DSN, USER, PASSWORD);
+if($db->logged_in() === true){
 	$session_user_id = $_SESSION['user_id'];
-	$user_data = user_data($session_user_id, 'user_id', 'username', 'password', 'first_name', 'last_name', 'email', 'password_recover', 'type', 'allow_email', 'profile');
-	if(user_active($user_data['username']) === false){
+	$user_data = user_data($session_user_id, 'user_id', 'userName', 'passWord', 'fname', 'lname', 'email', 'admin');
+	if(user_active($user_data['userName']) === false){
 		session_destroy();
-		echo '<META http-equiv="refresh" content="4;URL=index.php">';
-		exit();
+		$errors = "This username " . $user_data['userName'] . " is not an active account.<br />"
+			. " Please email the administrator to reactivate your account.<br />"
+			. "<a href='mailto=cwp@sc-cwp.kennys-spot.org?Subject=Account Reactivation'>Reactivate Your Account</a>";
 	}
 }
 
-$errors = array();
+if(!empty($errors)){
+	die(output_errors($errors));
+}
+
+
 require_once 'includes/overall/header.php';
+?>

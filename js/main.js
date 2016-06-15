@@ -104,6 +104,23 @@ $(document).ready(function(){
 		}
 	});
 
+
+
+	$('#logginButton').click(function(){
+		$.ajax({
+			method: "POST",
+			url: "../index.php",
+			data: {
+				name: $('#login#name').html(),
+				passord: $('#login#password').html()
+			}
+			.done(function(){
+				window.alert("Posted");
+			})
+		});
+
+	});
+
 	$("#signup").validate({
 		rules: {
 			fname: "required",

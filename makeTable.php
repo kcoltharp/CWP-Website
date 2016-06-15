@@ -1,7 +1,7 @@
 <?php
 require_once 'init.php';
 
-$db = new Database(dsn, user, pwd);
+$db = new MyDB(DSN, USER, PASSWORD);
 if((isset($_POST['studentNum'])) && (!empty($_POST['studentNum']))){
 	$query = "SELECT *"
 		. "FROM scores"

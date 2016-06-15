@@ -16,16 +16,12 @@ p {
 	margin:0 0 20px 0;
 }
 #date{
-	margin-left: 7%;
-	margin-right: 7%;
+	float: right;
+	margin-right: 2%;
 	background-color: #f9f9f9;
 	color: black;
-	border: 3px solid black;
-	padding: 10px 20px;
 	text-align: center;
-	text-decoration: none;
 	display: inline-block;
-	border-radius: 5px;
 }
 #date:hover{
 	background-color: black;
@@ -37,7 +33,7 @@ a:link, a:visited {
 	background-color: #f9f9f9;
 	color: black;
 	border: 3px solid black;
-	padding: 10px 20px;
+	padding: 5px 10px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -49,7 +45,9 @@ a:hover, a:active {
 	border-radius: 5px;
 	color: #f9f9f9;
 }
-
+.small{
+	font-size: .8em;
+}
 ul li {
 	padding:5px 0;
 }
@@ -81,24 +79,21 @@ h2 {
 }
 
 /* Containers */
-#container, footer {
+#container, footer, header {
 	background-color: #f9f9f9;
-	width:980px;
+	width:1040px;
 	margin:0 auto;
-	padding:20px;
+	padding: 20px;
 }
 
 header {
 	background-color: #f9f9f9;
-	width:990px;
-	padding:10px;
-	margin:0 auto 0 auto;
 	border-radius: 15px;
 	border-bottom: 3px dashed #aaa;
 }
 
 #container {
-	min-height:500px;
+	min-height:650px;
 	border-radius: 15px;
 }
 
@@ -151,11 +146,30 @@ nav ul li a.last {
 
 /* Aside */
 aside {
-	width:260px;
-	float:right;
+	float: right;
+	width:290px;
 	border-left:3px dashed #aaa;
 	border-bottom: 3px dashed #aaa;
-	padding-left:15px;
+	padding-left: 15px;
+}
+#side{
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	margin: 10px;
+}
+
+#notLoggedIn label {
+	position: relative;
+	vertical-align: middle;
+	bottom: 1px;
+}
+#notLoggedIn input[type=text],#notLoggedIn input[type=password],
+#notLoggedIn input[type=submit],#notLoggedIn input[type=email] {
+	display: block;
+	margin-bottom: 15px;
+}
+#notLoggedIn input[type=checkbox] {
+	margin-bottom: 15px;
 }
 
 .profile {
@@ -214,4 +228,40 @@ button#button{
 
 #studentScores tr:nth-child(even){
 	background-color: antiquewhite;
+}
+.clock {
+	width: 250px;
+	margin: 0 auto;
+	padding: 10px;
+	color: #FFF;background:#333;
+}
+.clock ul {
+	width: 240px;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	text-align: center
+}
+
+.clock ul li {
+	display: inline;
+	font-size: 1.5em;
+	text-align: center;
+	font-family: "Arial", Helvetica, sans-serif;
+	text-shadow: 0 2px 5px #55c6ff, 0 3px 6px #55c6ff, 0 4px 7px #55c6ff
+}
+#Date {
+	font-family: 'Arial', Helvetica, sans-serif;
+	font-size: 1.5em;
+	text-align: center;
+	text-shadow: 0 2px 5px #55c6ff, 0 3px 6px #55c6ff;
+	padding-bottom: 20px;
+}
+
+#point {
+	position: relative;
+	-moz-animation: mymove 1s ease infinite;
+	-webkit-animation: mymove 1s ease infinite;
+	padding-left: 5px;
+	padding-right: 5px
 }

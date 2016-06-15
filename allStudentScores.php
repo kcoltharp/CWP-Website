@@ -16,17 +16,8 @@
 		</thead>
 		<tbody>
 			<?php
-			$db = new Database(dsn, user, pwd);
-			$res = $db->prepare("SELECT
-		a.student_num, a.fname, a.lname, b.class_num,
-		b.legal_test_score, b.safety_test_score, b.combined_score,
-		b.target_hits, b.pass_fail
-	FROM students a, scores b
-	WHERE a.student_num = b.student_num");
-
-			$res->execute();
-			$array = $res->fetchAll(PDO::FETCH_ASSOC);
-			$x = 0;
+			$db = new MyDB(DSN, USER, PASSWORD);
+			$row = $db->getAllScores();
 			foreach($array as $row){
 				?><tr>
 					<td><?php echo $row['student_num']; ?></td>
