@@ -1,7 +1,4 @@
-<?php
-require_once 'init.php';
-$rowsmarty = new Smarty();
-?>
+<?php require_once 'init.php'; ?>
 <div class="container">
 	<table id="studentScores" border = "1" cellspacing = "3" cellpadding = "2">
 		<thead>

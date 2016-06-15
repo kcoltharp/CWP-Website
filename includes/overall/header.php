@@ -12,4 +12,4 @@
 					document.writeln(Date());
 				</script>
 			</div>
-			<br><br><br><br>
+			<br><br>
