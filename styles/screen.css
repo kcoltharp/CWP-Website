@@ -187,7 +187,8 @@ footer {
 button#button{
 	float: left;
 	margin: 5px;
-	padding: 5px;
+	padding: 5px 15px;
+	margin-left: 125px;
 }
 
 .calendar th{
