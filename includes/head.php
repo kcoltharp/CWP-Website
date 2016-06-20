@@ -30,7 +30,6 @@
 
 	<link rel="stylesheet" href="styles/main.css">
 	<link rel="stylesheet" href="styles/screen.css">
-
 	<script type="text/javascript">
 		var clockID = 0;
 		function UpdateClock(){
