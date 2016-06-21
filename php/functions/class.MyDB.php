@@ -109,15 +109,23 @@ class MyDB extends PDO{
 	}
 
 	public function logIn($user, $pwd){
-		$options = array('cost' => 12);
-		$passd = password_hash($pwd, PASSWORD_BCRYPT, $options);
+		$passd = password_hash($pwd, PASSWORD_DEFAULT);
+		echo $passd;
 		try{
-			$stmt = $this->prepare("SELECT * FROM `users` WHERE `userName` = '$user'");
+			$stmt = $this->prepare("SELECT * FROM `users` WHERE `userName` = ':user'");
+			$stmt->bindParam(':user', $user);
 			$stmt->execute();
 			$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
-			if($row[0]['passWord'] === $passd){
+			echo "<br />";
+			var_dump(password_get_info($row[0]['passWord']));
+			echo "<br />";
+			var_dump($row[0]);
+			if(password_verify($row[0]['passWord'], $passd)){
 				$_SESSION['userID'] = $row[0]['user_id'];
 				$_SESSION['userName'] = ucfirst($row[0]['userName']);
+				return TRUE;
+			} else{
+				return FALSE;
 			}
 		} catch(PDOException $ex){
 			$errors = '<p><strong>Error:</strong> ' . $ex->getMessage() .
@@ -130,6 +138,26 @@ class MyDB extends PDO{
 
 	public function logged_in(){
 		return (isset($_SESSION['user_id'])) ? true : false;
+	}
+
+	public function changePassword($username, $newPassword){
+		$password = password_hash($newPassword, PASSWORD_DEFAULT);
+		try{
+			$stmt = $this->prepare("UPDATE `users` SET `passWord` = :password WHERE `userName` = :user");
+			$stmt->bindParam(':password', $password);
+			$stmt->bindParam(':user', $username);
+			$stmt->execute();
+			$rowCount = $stmt->rowCount();
+			if($rowCount > 0){
+				echo $rowCount . " row(s) was updated.";
+			}
+		} catch(PDOException $ex){
+			$errors = '<p><strong>Error:</strong> ' . $ex->getMessage() .
+				'</p><br /><p><strong>File:</strong> ' . $ex->getFile() .
+				'</p></br><p><strong>Line:</strong> ' . $ex->getLine() .
+				'</p>';
+			die(output_errors($errors));
+		}
 	}
 
 	public function user_data($user_id){

@@ -17,8 +17,7 @@
 	</span>
 	<br /><br />
 	<?php
-	$db = new MyDB(DSN, USER, PASSWORD);
-	if($db->logged_in() === true){
+	if($isLoggedIn === TRUE){
 		require_once 'includes/widgets/loggedin.php';
 	} else{
 		require_once 'includes/widgets/login.php';

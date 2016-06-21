@@ -1,21 +1,15 @@
 <?php
 if((isset($_POST['password'])) && (isset($_POST['username']))){
-	?>
-	<pre>
-		<?php
-		echo "Post data: <br />";
-		print_r($_POST) . "br />";
-		?>
-	</pre>
-	<?php
 	$db = new MyDB(DSN, USER, PASSWORD);
+	$passd = password_hash($_POST['password'], PASSWORD_BCRYPT);
 	$db->logIn($_POST['username'], $_POST['password']);
 } else{
 	?>
 	<pre>
 		<?php
-		echo "Post data: <br />";
-		print_r($_POST) . "br />";
+		//echo "Post data: <br />";
+		//print_r($passd) . "br />";
+		//print_r($_POST) . "br />";
 		?>
 	</pre>
 	<div class="widget">
