@@ -11,9 +11,7 @@
 	<meta name="keywords" content="SC CWP, South Carolina Concealed, Concealed,South Carolina Weapon, Weapon,South Carolina Permit, Permit, Concealed Permit, Concealed Weapon, Concealed Weapon Permit, South Carolina CWP, South Carolina Concealed Weapon Permit" />
 
 	<!-- CDN Requests for jQuery (required for bootstrap) and jQuery Validate Plugin -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

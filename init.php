@@ -1,11 +1,5 @@
 <?php
 
-//$GLOBALS['isLoggedIn'];
-if(!isset($GLOBALS['isLoggedIn'])){
-	$GLOBALS['isLoggedIn'] = FALSE;
-} elseif(!isset($isLoggedIn)){
-	$isLoggedIn = FALSE;
-}
 require_once 'php/functions/geoPlugin.php';
 require_once 'php/functions/XIP.php';
 require_once 'php/functions/class.MyDB.php';
@@ -15,16 +9,6 @@ $errors = array();
 define('DSN', 'mysql:dbname=sccwp;host=127.0.0.1;charset=utf8', false);
 define('USER', 'kenny', false);
 define('PASSWORD', 'kc226975', false);
-
-$db = new MyDB(DSN, USER, PASSWORD);
-if(($isLoggedIn === TRUE) || ($db->logged_in() === TRUE)){
-	$session_user_id = $_SESSION['user_id'];
-	$user_data = $db->user_data($session_user_id);
-	var_dump($user_data);
-} else{
-	echo "HELLO!!!";
-	//echo '<META http-equiv="refresh" content="1;URL=C:/Apache24/htdocs/cwp-test/login.php">';
-}
 
 $geoplugin = new geoPlugin();
 $geoplugin->locate();
