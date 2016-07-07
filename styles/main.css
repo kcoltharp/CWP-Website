@@ -1,0 +1,80 @@
+body{
+
+}
+/* Headers */
+h1 {
+	font-size:1.8em;
+}
+h2 {
+	font-size:1.4em;
+}
+h3{
+	font-size: 1.2em;
+}
+h4{
+	font-size: .9em;
+}
+header {
+	background-color: #f9f9f9;
+	border-radius: 15px;
+	border-bottom: 3px dashed #aaa;
+}
+/* Navigation */
+nav {
+	font-family: 'Cinzel';
+	font-size: 1em;
+	float:left;
+}
+nav ul {
+	margin:0;
+}
+nav ul li {
+	display:inline;
+	margin-right:10px;
+}
+nav ul li a {
+	text-decoration:none;
+}
+nav ul li.current {
+	font-weight:bold;
+}
+nav ul li a.last {
+	border-right:0;
+}
+/* Aside */
+aside {
+	float: right;
+	width:290px;
+	border-left:3px dashed #aaa;
+	border-bottom: 3px dashed #aaa;
+	padding-left: 15px;
+}
+/* Footer */
+footer {
+	border-radius: 15px;
+	background-color: #f9f9f9;
+	width:1040px;
+	height: 100px;
+	margin:0 auto;
+	padding: 20px;
+	border-top:3px dashed #ddd;
+	color:#999;
+}
+/*******************************************************************************
+						Class and ID Rules
+********************************************************************************/
+h1#company_name{
+	font-family: 'Faster One', cursive;
+	font-size: 3em;
+	text-align: center;
+	margin:0 0 10px 0;
+	padding:0;
+}
+#container {
+	background-color: #f9f9f9;
+	width:1040px;
+	margin:0 auto;
+	padding: 20px;
+	min-height:650px;
+	border-radius: 15px;
+}
