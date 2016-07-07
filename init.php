@@ -10,6 +10,8 @@ define('DSN', 'mysql:dbname=sccwp;host=127.0.0.1;charset=utf8', false);
 define('USER', 'kenny', false);
 define('PASSWORD', 'kc226975', false);
 
+$db = new MyDB(DSN, USER, PASSWORD);
+
 $geoplugin = new geoPlugin();
 $geoplugin->locate();
 

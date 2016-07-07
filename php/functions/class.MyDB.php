@@ -154,20 +154,36 @@ class MyDB extends PDO{
 
 	public function logIn($user, $pwd){
 		try{
-			$stmt = $this->prepare("SELECT * FROM `users` WHERE `userName` = ':user' AND `passWord` = password(':password')");
-			$stmt->bindParam(':password', $pwd, PDO::PARAM_STR);
+			$stmt = $this->prepare("SELECT * FROM users WHERE userName = :user");
 			$stmt->bindParam(':user', $user, PDO::PARAM_STR);
 			$stmt->execute();
 			$row = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			if((isset($row)) && (!empty($row))){
-				//extract($row[0], EXTR_PREFIX_ALL, "var_");
-				$domain = ($_SERVER['HTTP_HOST'] != 'localhost') ? $_SERVER['HTTP_HOST'] : FALSE;
-				foreach($row[0] as $key => $value){
-					setcookie($key, $value, time() * 60 * 60 * 24 * 365, "/", $domain, FALSE, FALSE);
-				}// end foreach to set cookies
-				return TRUE;
+				if(password_verify($pwd, $row[0]['passWord'])){
+					echo "<br />Success!";
+					//extract($row[0], EXTR_PREFIX_ALL, "var_");
+					$domain = ($_SERVER['HTTP_HOST'] != 'localhost') ? $_SERVER['HTTP_HOST'] : FALSE;
+					setcookie("LOGGED_IN", "TRUE");
+					foreach($row[0] as $key => $value){
+						$_COOKIE[$key] = $value;
+						$_COOKIE['expire'] = time() + (60 * 60 * 24 * 30);
+						setcookie($key, $value, time() + (60 * 60 * 24 * 30), "/", $domain, FALSE, FALSE);
+					}// end foreach to set cookies
+					setcookie("LOGGED_IN", "TRUE");
+					return TRUE;  //if passwords match and cookies are set
+				} elseif(!password_verify($pwd, $row[0]['passWord'])){
+					setcookie("LOGGED_IN", "FALSE");
+					echo "<br />Failed verify!";
+					return FALSE;  //if password verify is false
+				} else{
+					setcookie("LOGGED_IN", "FALSE");
+					return FALSE;   //if password verify does not work
+				}//end inner if/elseif/else
 			} else{
-				return FALSE;
+				echo "<br /> var row not set??";
+				var_dump($row);
+				setcookie("LOGGED_IN", "FALSE");
+				return FALSE;  //if $row is empty or not set
 			}// end if/else
 		} catch(PDOException $ex){
 			$errors = '<p><strong>Error:</strong> ' . $ex->getMessage() .
@@ -179,7 +195,7 @@ class MyDB extends PDO{
 	}
 
 	public function logged_in(){
-		return (isset($_SESSION['user_id'])) ? true : false;
+		return (isset($_SESSION['user_id'])) ? TRUE : FALSE;
 	}
 
 	public function changePassword($username, $newPassword){
@@ -275,6 +291,59 @@ class MyDB extends PDO{
 		return '<ul><li>' . implode('</li><li>', $errors) . '</li></ul>';
 	}
 
+	public function signUP($array){
+		if(isset($_POST)){
+			//get user form input from $POST, sanitize, then assign to normal variable
+			$fname = $this->sanitize($_POST['fname']);
+			$lname = $this->sanitize($_POST['lname']);
+			$sex = $this->sanitize($_POST['sex']);
+			$dob = $this->sanitize($_POST['dob']);
+			$haddress = $this->sanitize($_POST['haddress']);
+			$city = $this->sanitize($_POST['city']);
+			$state = $this->sanitize($_POST['state']);
+			$zip = $this->sanitize($_POST['zip']);
+			$resident = $this->sanitize($_POST['resident']);
+			$guntype = $this->sanitize($_POST['guntype']);
+			$gunmake = $this->sanitize($_POST['gunmake']);
+			$guncaliber = $this->sanitize($_POST['guncaliber']);
+			$experience = $this->sanitize($_POST['experience']);
+			$disabilities = $this->sanitize($_POST['disabilities']);
+			$hphone = $this->sanitize($_POST['hphone']);
+			$email = $this->sanitize($_POST['email']);
+			$email2 = $this->sanitize($_POST['email2']);
+			$driverlic = $this->sanitize($_POST['driverlic']);
+			$dlstate = $this->sanitize($_POST['dlstate']);
+			$nranum = $this->sanitize($_POST['nranum']);
+			$nraexpire = $this->sanitize($_POST['nraexpire']);
+			$emergencyname = $this->sanitize($_POST['emergencyname']);
+			$emergencyrelation = $this->sanitize($_POST['emergencyrelation']);
+			$emergencyaddress = $this->sanitize($_POST['emergencyaddress']);
+			$emergencycity = $this->sanitize($_POST['emergencycity']);
+			$emergencystate = $this->sanitize($_POST['emergencystate']);
+			$emergencyzip = $this->sanitize($_POST['emergencyzip']);
+			$emergencyhome = $this->sanitize($_POST['emergencyhome']);
+			$emergencycell = $this->sanitize($_POST['emergencycell']);
+			$emergencywork = $this->sanitize($_POST['emergencywork']);
+			$disablevet = $this->sanitize($_POST['disablevet']);
+
+			$sql = "INSERT INTO `students` (`id`, `fname`, `lname`, `sex`, `dob`, `haddress`, `city`, `state`, `zip`, `resident`, `experience`, `disabilities`, `hphone`, `email`, `email2`, `driverlic`, `dlstate`, `nranum`, `nraexpire`, `emergency_name`, `emergency_relation`, `emergency_address`, `emergency_city`, `emergency_state`, `emergency_zip`, `emergency_home_num`, `emergency_cell_num`, `emergency_work_num`, `disabled_veteran`, `submissionDate`, `submissionTime`) VALUES ('', '$fname', '$lname', '$sex', '$dob', '$haddress', '$city', '$state', '$zip', '$resident', '$experience', '$disabilities', '$hphone', '$email', '$email2', '$driverlic', '$dlstate', '$nranum', '$nraexpire', '$emergencyname', '$emergencyrelation', '$emergencyaddress', '$emergencycity', '$emergencystate', '$emergencyzip', '$emergencyhome', '$emergencycell', '$emergencywork', '$disablevet', CURRENT_DATE(), CURRENT_TIME())";
+
+			if($result = mysqli_query($link, $sql)){
+				printf("Inserted %d of rows" . mysqli_num_rows($result));
+				$link->close();
+			} else{
+				printf("There was an error " . mysqli_error($link));
+				$link->close();
+				exit();
+			}//end inner if/else
+		} else{
+			echo "<b><h2 align='center'>There was no data! Please press the back button, refresh the page and try again!</h2></b>";
+			$link->close();
+			exit();
+		}//end outer if/else
+	}
+
+//end function
 }
 
 ?>

@@ -2,11 +2,7 @@
 
 function goTo(){
 	location.replace("application.php");
-}
-
-function disAgree(){
-
-}
+}// end javascript function goTo()
 
 jQuery.validator.addMethod(
 	"SexCompleted",
@@ -20,7 +16,7 @@ jQuery.validator.addMethod(
 		}
 	},
 	"This field is required! You must select an option."
-	);
+	);// end jQuery validator function
 
 jQuery.validator.addMethod(
 	"TrueRes",
@@ -34,7 +30,7 @@ jQuery.validator.addMethod(
 		}
 	},
 	"This field is required! You must select an option."
-	);
+	);// end jQuery validator function
 
 jQuery.validator.addMethod(
 	"GunType",
@@ -50,7 +46,7 @@ jQuery.validator.addMethod(
 		}
 	},
 	"This field is required! You must select an option."
-	);
+	);// end jQuery validator function
 
 jQuery.validator.addMethod(
 	"DL_ST",
@@ -66,62 +62,11 @@ jQuery.validator.addMethod(
 		}
 	},
 	"This field is required! You must select an option."
-	);
+	);// end jQuery validator function
 
 $(document).ready(function(){
-	//do something if browser width is ?
-	if(document.documentElement.clientWidth < 768){
-		$('.hovering').wrap('<button></button>');
-	}
-	if(document.documentElement.clientWidth > 768){
-		$('.hovering').unwrap('<button></button>');
-	}
 
-
-	//test js
-	$('.button').on('click', function(){
-		$('.content').toggleClass('isOpen');
-	});
-
-	$('li a').on('hover', function(){
-		$('.hovering').toggleClass('active');
-	});
-	//end test js
-
-	$('ol.courseOutline').slideUp();
-	$('h4#outline').click(function(){
-		$('ol.courseOutline').slideToggle();
-	});
-
-	$('#disagree').click(function(){
-		var x = confirm("Are you sure? If you continue you will navigate away from this\nwebsite and will not be able to signup for the SC Concealed\nWeapons Permit Class!");
-		if(x === true){
-			location.replace("sorry.php");
-		}else if(x === false){
-			location.reload();
-		}else{
-			alert("Ooops, something went wrong! Try refreshing the page.");
-		}
-	});
-
-
-
-	$('#logginButton').click(function(){
-		$.ajax({
-			method: "POST",
-			url: "../index.php",
-			data: {
-				name: $('#login#name').html(),
-				passord: $('#login#password').html()
-			}
-			.done(function(){
-				window.alert("Posted");
-			})
-		});
-
-	});
-
-	$("#signup").validate({
+	$('#signup').validate({
 		rules: {
 			fname: "required",
 			lname: "required",
@@ -174,7 +119,5 @@ $(document).ready(function(){
 		message: {
 			comment: "This field is required!"
 		}
-	}
-	);
-
+	});
 });

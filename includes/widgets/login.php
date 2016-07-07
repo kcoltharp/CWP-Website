@@ -2,7 +2,7 @@
 <div class="widget">
 	<h2>Administrative Log In</h2>
 	<div class="inner">
-		<form id="loginForm" action="" method="post">
+		<form id="loginForm" action="authorize.cgi" method="post">
 			<ul id="login">
 				<li>
 					Username:<br>
