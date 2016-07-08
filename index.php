@@ -13,8 +13,7 @@ if((!isset($_COOKIE['LOGGED_IN'])) || (empty($_COOKIE))){
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	?>
 
-	<form>
-		<br />
+	<form id="studentData">
 		<select name='students' onChange='showStudent(this.value)'>
 			<option value="" selected>Select a student</option>
 			<?php
@@ -26,27 +25,9 @@ if((!isset($_COOKIE['LOGGED_IN'])) || (empty($_COOKIE))){
 			?>
 		</select>
 	</form>
+	<div id="txtHint">Student data. . . .</div>
 	<br />
-	<div id="txtHint">Student info will be listed here...</div>
-	<script>
-		function showStudent(str){
-			var xhttp;
-			if(str === ""){
-				document.getElementById("txtHint").innerHTML = "";
-				return;
-			}
-			xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function(){
-				if(xhttp.readyState === 4 && xhttp.status === 200){
-					document.getElementById("txtHint").innerHTML = xhttp.responseText;
-				}
-			};
-			xhttp.open("GET", "php/getstudent.php?q=" + str, true);
-			xhttp.send();
-		}
-	</script>
-	<br />
-	<form action="" method="POST">
+	<form id="pageData" action="" method="POST">
 		<select class="select" name="selectPage" onchange="showPage(this.value)">
 			<option value="" selected="">Make a Selection</option>
 			<option value="1">Calendar</option>
@@ -58,45 +39,18 @@ if((!isset($_COOKIE['LOGGED_IN'])) || (empty($_COOKIE))){
 			<option value="7">Home</option>
 		</select>
 	</form>
+	<div id="page">Page data. . . .</div>
 	<br />
-	<div id="page">Student info will be listed here...</div>
-	<script>
-		/*
-		 $(document).ready(function(){
-		 $(".select").ajax({
-		 method: "POST",
-		 url: "choosePage.php",
-		 data: $('.select').change().val()
-		 });
-		 .done(function(html){
-		 $('#page').append(html);
-		 });
-		 });
-		 */
-		function showPage(num){
-			var xhttp;
-			if(num === ""){
-				document.getElementById("page").innerHTML = "";
-				return;
-			}
-			xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function(){
-				if(xhttp.readyState === 4 && xhttp.status === 200){
-					document.getElementById("page").innerHTML = xhttp.responseText;
-				}
-			};
-			xhttp.open("GET", "choosePage.php?q=" + num, true);
-			xhttp.send();
-		}
+	<form id="sqlData" action="" method="POST">
+		<select class="select" name="selectPage" onchange="showPage2(this.value)">
+			<option value="" selected="">Make a Selection</option>
+			<option value="allStudentScores.php">Get all student scores</option>
+		</select>
 
-	</script>
-	<br /><br />
-	<form action="" method="POST">
 		<label for="textbox">Enter SQL to submit to MySQL</label><br />
 		<textarea onchange="runSQL(this.value)" name="textbox" form="sql" rows="3" cols="45" ></textarea>
 	</form>
-	<br />
-	<div><pre id="results"></pre>Result of query will be displayed here.</div>
+	<div id="results">Query results. . . .</div>
 	<script>
 		function runSQL(str){
 			var xhttp;
@@ -113,7 +67,51 @@ if((!isset($_COOKIE['LOGGED_IN'])) || (empty($_COOKIE))){
 			xhttp.open("GET", "sql.php?q=" + str, true);
 			xhttp.send();
 		}
-
+		function showStudent(str){
+			var xhttp;
+			if(str === ""){
+				document.getElementById("txtHint").innerHTML = "";
+				return;
+			}
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function(){
+				if(xhttp.readyState === 4 && xhttp.status === 200){
+					document.getElementById("txtHint").innerHTML = xhttp.responseText;
+				}
+			};
+			xhttp.open("GET", "php/getstudent.php?q=" + str, true);
+			xhttp.send();
+		}
+		function showPage(num){
+			var xhttp;
+			if(num === ""){
+				document.getElementById("page").innerHTML = "";
+				return;
+			}
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function(){
+				if(xhttp.readyState === 4 && xhttp.status === 200){
+					document.getElementById("page").innerHTML = xhttp.responseText;
+				}
+			};
+			xhttp.open("GET", "choosePage.php?q=" + num, true);
+			xhttp.send();
+		}
+		function showPage2(str){
+			var xhttp;
+			if(str === ""){
+				document.getElementById("results").innerHTML = "";
+				return;
+			}
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function(){
+				if(xhttp.readyState === 4 && xhttp.status === 200){
+					document.getElementById("results").innerHTML = xhttp.responseText;
+				}
+			};
+			xhttp.open("GET", str, true);
+			xhttp.send();
+		}
 	</script>
 	<?php
 } else{

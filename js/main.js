@@ -1,5 +1,7 @@
 /* global $this */
 
+
+
 function goTo(){
 	location.replace("application.php");
 }// end javascript function goTo()

@@ -92,8 +92,7 @@ class MyDB extends PDO{
 			FROM students a, scores b
 			WHERE a.student_num = b.student_num");
 			$stmt->execute();
-			$rows = $stmt->setFetchMode(PDO::FETCH_LAZY);
-			//$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			return $rows;
 		} catch(PDOException $ex){
 			$errors = '<p><strong>Error:</strong> ' . $ex->getMessage() .

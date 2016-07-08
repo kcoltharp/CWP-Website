@@ -33,7 +33,7 @@
 				<input type="file" name="profile"> <input type="submit">
 			</form>
 		</div>
-		<ul>
+		<ul id="profileLinks">
 			<li>
 				<a href="logout.php">Log out</a>
 			</li>
