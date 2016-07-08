@@ -2,10 +2,6 @@
 
 require_once 'init.php';
 
-var_dump($_COOKIE);
-echo "<br />";
-var_dump($_SESSION);
-echo "<br />";
 //This gets today's date
 $date = time();
 

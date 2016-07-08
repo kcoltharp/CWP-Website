@@ -163,26 +163,26 @@ class MyDB extends PDO{
 					echo "<br />Success!";
 					//extract($row[0], EXTR_PREFIX_ALL, "var_");
 					$domain = ($_SERVER['HTTP_HOST'] != 'localhost') ? $_SERVER['HTTP_HOST'] : FALSE;
-					setcookie("LOGGED_IN", "TRUE");
+					setcookie("LOGGED_IN", "true", time() + (60 * 60 * 8), "/", $domain, FALSE, FALSE);
 					foreach($row[0] as $key => $value){
 						$_COOKIE[$key] = $value;
-						$_COOKIE['expire'] = time() + (60 * 60 * 24 * 30);
-						setcookie($key, $value, time() + (60 * 60 * 24 * 30), "/", $domain, FALSE, FALSE);
+						$_COOKIE['expire'] = time() + (60 * 60 * 8);
+						setcookie($key, $value, time() + (60 * 60 * 8), "/", $domain, FALSE, FALSE);
 					}// end foreach to set cookies
-					setcookie("LOGGED_IN", "TRUE");
+					setcookie("LOGGED_IN", "true", time() + (60 * 60 * 8), "/", $domain, FALSE, FALSE);
 					return TRUE;  //if passwords match and cookies are set
 				} elseif(!password_verify($pwd, $row[0]['passWord'])){
-					setcookie("LOGGED_IN", "FALSE");
+					setcookie("LOGGED_IN", "false", time() + (60 * 60 * 8), "/", $domain, FALSE, FALSE);
 					echo "<br />Failed verify!";
 					return FALSE;  //if password verify is false
 				} else{
-					setcookie("LOGGED_IN", "FALSE");
+					setcookie("LOGGED_IN", "false", time() + (60 * 60 * 8), "/", $domain, FALSE, FALSE);
 					return FALSE;   //if password verify does not work
 				}//end inner if/elseif/else
 			} else{
 				echo "<br /> var row not set??";
 				var_dump($row);
-				setcookie("LOGGED_IN", "FALSE");
+				setcookie("LOGGED_IN", "false", time() + (60 * 60 * 8), "/", $domain, FALSE, FALSE);
 				return FALSE;  //if $row is empty or not set
 			}// end if/else
 		} catch(PDOException $ex){
@@ -228,6 +228,9 @@ class MyDB extends PDO{
 		$userID = (int) $user_id;
 		$func_num_args = func_num_args();
 		$func_get_args = func_get_args();
+		echo "<pre>";
+		var_dump($func_get_args);
+		echo "</pre><br />";
 		if($func_num_args > 1){
 			unset($func_get_args[0]);
 			$fields = '`' . implode('`, `', $func_get_args) . '`';
@@ -267,14 +270,14 @@ class MyDB extends PDO{
 
 	public function logged_in_redirect(){
 		if(logged_in() === true){
-			echo '<META http-equiv="refresh" content="1;URL=C:/Apache24/htdocs/cwp-test/index.php">';
+			echo '<META http-equiv="refresh" content="1;URL=http://localhost/cwp-test/index.php">';
 			exit();
 		}
 	}
 
 	public function protect_page(){
 		if(logged_in() === false){
-			echo '<META http-equiv="refresh" content="1;URL=C:/Apache24/htdocs/cwp-test/index.php">';
+			echo '<META http-equiv="refresh" content="1;URL=http://localhost/cwp-test/index.php">';
 			exit();
 		}
 	}
@@ -282,7 +285,7 @@ class MyDB extends PDO{
 	public function admin_protect(){
 		global $user_data;
 		if(($user_data['admin'] === 'y') && (logged_in() === true)){
-			echo '<META http-equiv="refresh" content="1;URL=C:/Apache24/htdocs/cwp-test/admin/">';
+			echo '<META http-equiv="refresh" content="1;URL=http://localhost/cwp-test/admin/">';
 			exit();
 		}
 	}

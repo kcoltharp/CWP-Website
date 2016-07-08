@@ -3,15 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Apache24/htdocs/cwp-test/core/functions/general.php</file>
             <file>file:/C:/Apache24/htdocs/cwp-test/login.php</file>
             <file>file:/C:/Apache24/htdocs/cwp-test/init.php</file>
-            <file>file:/C:/Apache24/htdocs/cwp-test/includes/overall/footer.php</file>
+            <file>file:/C:/Apache24/htdocs/cwp-test/includes/widgets/loggedin.php</file>
             <file>file:/C:/Apache24/htdocs/cwp-test/php/functions/class.MyDB.php</file>
             <file>file:/C:/Apache24/htdocs/cwp-test/php/getstudent.php</file>
-            <file>file:/C:/Apache24/htdocs/cwp-test/styles/screen.css</file>
+            <file>file:/C:/Apache24/htdocs/cwp-test/includes/aside.php</file>
+            <file>file:/C:/Apache24/htdocs/cwp-test/styles/main.css</file>
             <file>file:/C:/Apache24/htdocs/cwp-test/signup.php</file>
             <file>file:/C:/Apache24/htdocs/cwp-test/index.php</file>
-            <file>file:/C:/Apache24/htdocs/cwp-test/js/main.js</file>
+            <file>file:/C:/Apache24/htdocs/cwp-test/choosePage.php</file>
         </group>
     </open-files>
 </project-private>

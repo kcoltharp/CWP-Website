@@ -16,6 +16,9 @@ h4{
 }
 header {
 	background-color: #f9f9f9;
+	margin: auto;
+	width: 1080px;
+	min-height: 100px;
 	border-radius: 15px;
 	border-bottom: 3px dashed #aaa;
 }
@@ -44,10 +47,19 @@ nav ul li a.last {
 /* Aside */
 aside {
 	float: right;
-	width:290px;
+	width: 290px;
+	min-height: 180px;
 	border-left:3px dashed #aaa;
 	border-bottom: 3px dashed #aaa;
 	padding-left: 15px;
+}
+/* Table Properties */
+table, th, td {
+	border: 1px solid black;
+}
+
+col {
+	display: table-column;
 }
 /* Footer */
 footer {
@@ -57,12 +69,15 @@ footer {
 	height: 100px;
 	margin:0 auto;
 	padding: 20px;
-	border-top:3px dashed #ddd;
+	border-top: 3px dashed #aaa;
 	color:#999;
 }
 /*******************************************************************************
 						Class and ID Rules
 ********************************************************************************/
+.hidden{
+	display: none;
+}
 h1#company_name{
 	font-family: 'Faster One', cursive;
 	font-size: 3em;
@@ -71,10 +86,57 @@ h1#company_name{
 	padding:0;
 }
 #container {
+	overflow: auto;
 	background-color: #f9f9f9;
 	width:1040px;
 	margin:0 auto;
 	padding: 20px;
-	min-height:650px;
+	min-height: 650px;
 	border-radius: 15px;
+}
+.widget h2{
+	text-align: center;
+}
+ul#login{
+	-webkit-padding-start: 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	margin: 0;
+	list-style: none;
+}
+#login li label{
+	margin: 0 ;
+	float: left;
+}
+#loginForm #logginButton{
+	float: left;
+	margin: 10px 0 10px 70px;
+	padding: 4px;
+}
+.required{
+	color: red;
+	font-weight: bold;
+}
+#directions{
+	margin-top: 80px;
+}
+div.left{
+	margin-top: 150px;
+	float: left;
+	bottom: 15px;
+}
+div.right{
+	float: right;
+	bottom: 15px;
+}
+form#signup div.right fieldset{
+	border: 2px dashed #aaa;
+	width: 95%;
+}
+form#signup div.right fieldset legend{
+	text-align: right;
+	color: red;
+	font-weight: bold;
 }

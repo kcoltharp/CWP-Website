@@ -117,6 +117,16 @@ if((isset($_POST['posted'])) && ($_POST['posted'] == 'true')){
 					</select>
 				</p>
 				<p>
+					<label class="required" for="experience">Describe prior firearm,<br/>military, and/or law<br/>enforcement experience<br/>Enter "None" if none:</label>
+					<textarea rows="4" cols="50" id="experience"	name="experience" placeholder="None"></textarea>
+				</p>
+				<p>
+					<label class="required" for="disabilities">Describe any disabilities<br/>and/or special needs.<br/>Enter "None" if none:</label>
+					<textarea rows="4" cols="50" id="disabilities" name="disabilities" placeholder="None"></textarea>
+				</p>
+			</div>
+			<div class="right">
+				<p>
 					<label class="required" for="guntype">Type of Gun: </label>
 					<select name="guntype" id="guntype">
 						<option value="Make Selection">Make Selection</option>
@@ -137,17 +147,6 @@ if((isset($_POST['posted'])) && ($_POST['posted'] == 'true')){
 					<label for="guncaliber">Gun Caliber: </label>
 					<input type="text" id="guncaliber" name="guncaliber" placeholder="9mm">
 				</p>
-				<p>
-					<label class="required" for="experience">Describe prior firearm,<br/>military, and/or law<br/>enforcement experience<br/>Enter "None" if none:</label>
-					<textarea rows="4" cols="50" id="experience"	name="experience" placeholder="None"></textarea>
-				</p>
-				<p>
-					<label class="required" for="disabilities">Describe any disabilities<br/>and/or special needs.<br/>Enter "None" if none:</label>
-					<textarea rows="4" cols="50" id="disabilities" name="disabilities" placeholder="None"></textarea>
-				</p>
-			</div>
-			<div class="right">
-
 				<p>
 					<label class="required" for="hphone">Home Phone Number: </label>
 					<input type="tel" id="hphone" name="hphone" placeholder="(843) 123-4567">
@@ -181,46 +180,49 @@ if((isset($_POST['posted'])) && ($_POST['posted'] == 'true')){
 					<label for="nraexpire">NRA Membership Expires: </label>
 					<input type="date" id="nraexpire" name="nraexpire" placeholder="01/01/1970">
 				</p>
-				<p>
-					<label class="required" for="emergencyname">Emergency Contact Name: </label>
-					<input type="text" id="emergencyname" name="emergencyname" placeholder="Emergency Contact Name">
-				</p>
-				<p>
-					<label class="required" for="emergencyrelation">Relationship: </label>
-					<input type="text" id="emergencyrelation" name="emergencyrelation" placeholder="Relationship">
-				</p>
-				<p>
-					<label class="required" for="emergencyaddress">Contact's Address: </label>
-					<input type="text" id="emergencyaddress" name="emergencyaddress" placeholder="Contact's Address">
-				</p>
-				<p>
-					<label class="required" for="emergencyaddress2">Contact's Address2: </label>
-					<input type="text" id="emergencyaddress2" name="emergencyaddress2" placeholder="Contact's Apt or PO Box">
-				</p>
-				<p>
-					<label class="required" for="emergencycity">Contact's City: </label>
-					<input type="text" id="emergencycity" name="emergencycity" placeholder="Georgetown">
-				</p>
-				<p>
-					<label class="required" for="emergencystate">Contact's State: </label>
-					<input type="text" id="emergencystate" name="emergencystate" placeholder="South Carolina">
-				</p>
-				<p>
-					<label class="required" for="emergencyzip">Contact's Zip Code: </label>
-					<input type="text" id="emergencyzip" name="emergencyzip" placeholder="29440">
-				</p>
-				<p>
-					<label class="required" for="emergencyhphone">Contact's Home Phone: </label>
-					<input type="tel" id="emergencyhphone" name="emergencyhphone" placeholder="(843) 123-4567">
-				</p>
-				<p>
-					<label class="required" for="emergencycell">Contact's Cell Phone: </label>
-					<input type="tel" id="emergencycell" name="emergencycell" placeholder="(843) 123-4567">
-				</p>
-				<p>
-					<label class="required" for="emergencywork">Contact's Work Phone: </label>
-					<input type="tel" id="emergencywork" name="emergencywork" placeholder="(843) 123-4567">
-				</p>
+				<fieldset>
+					<legend>Emergency Contact Information</legend>
+					<p>
+						<label class="required" for="emergencyname">Contact Name: </label>
+						<input type="text" id="emergencyname" name="emergencyname" placeholder="Emergency Contact Name">
+					</p>
+					<p>
+						<label class="required" for="emergencyrelation">Relationship: </label>
+						<input type="text" id="emergencyrelation" name="emergencyrelation" placeholder="Relationship">
+					</p>
+					<p>
+						<label class="required" for="emergencyaddress">Contact's Address: </label>
+						<input type="text" id="emergencyaddress" name="emergencyaddress" placeholder="Contact's Address">
+					</p>
+					<p>
+						<label class="required" for="emergencyaddress2">Contact's Address2: </label>
+						<input type="text" id="emergencyaddress2" name="emergencyaddress2" placeholder="Contact's Apt or PO Box">
+					</p>
+					<p>
+						<label class="required" for="emergencycity">Contact's City: </label>
+						<input type="text" id="emergencycity" name="emergencycity" placeholder="Georgetown">
+					</p>
+					<p>
+						<label class="required" for="emergencystate">Contact's State: </label>
+						<input type="text" id="emergencystate" name="emergencystate" placeholder="South Carolina">
+					</p>
+					<p>
+						<label class="required" for="emergencyzip">Contact's Zip Code: </label>
+						<input type="text" id="emergencyzip" name="emergencyzip" placeholder="29440">
+					</p>
+					<p>
+						<label class="required" for="emergencyhphone">Contact's Home Phone: </label>
+						<input type="tel" id="emergencyhphone" name="emergencyhphone" placeholder="(843) 123-4567">
+					</p>
+					<p>
+						<label class="required" for="emergencycell">Contact's Cell Phone: </label>
+						<input type="tel" id="emergencycell" name="emergencycell" placeholder="(843) 123-4567">
+					</p>
+					<p>
+						<label class="required" for="emergencywork">Contact's Work Phone: </label>
+						<input type="tel" id="emergencywork" name="emergencywork" placeholder="(843) 123-4567">
+					</p>
+				</fieldset>
 				<p>
 					<label for="submit"></label>
 					<input type="hidden" name="posted" value="true" />
@@ -229,4 +231,4 @@ if((isset($_POST['posted'])) && ($_POST['posted'] == 'true')){
 			</div>
 		</form>
 	</div>
-<?php } ?>
+<?php } require_once 'includes/overall/footer.php'; ?>

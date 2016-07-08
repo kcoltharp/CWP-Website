@@ -5,11 +5,11 @@
 		<form id="loginForm" action="authorize.cgi" method="post">
 			<ul id="login">
 				<li>
-					Username:<br>
+					<label for="username">Username:</label>
 					<input id="name" type="text" name="username">
 				</li>
 				<li>
-					Password:<br>
+					<label for="password">Password:&nbsp;</label>
 					<input id="password" type="password" name="password">
 				</li>
 				<li>
